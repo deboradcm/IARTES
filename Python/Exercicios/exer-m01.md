@@ -111,7 +111,8 @@ aluno pode ter.
 # 1) peso positivo
 # 2) notas no intervalo de [0,10]
 
-''''
+```
+
 def validar_notas(notas, pesos):
     executa = True
     msg_erro = "\n"
@@ -153,9 +154,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-''''
-
-
+    
+```
 
 
 
