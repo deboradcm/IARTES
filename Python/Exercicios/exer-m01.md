@@ -102,7 +102,7 @@ Sendo o valor 3 for informado e armazenado na variável número, na tela será i
 para que ele se torne generalista, i.e., aceite qualquer quantidade de notas que cada
 aluno pode ter. 
 
-''''
+
 # Calcular a nota no curso com certo número de alunos
 #
 # Para cada aluno, Ler K notas(reais) e K pesos (inteiros)
@@ -111,6 +111,7 @@ aluno pode ter.
 # 1) peso positivo
 # 2) notas no intervalo de [0,10]
 
+''''
 def validar_notas(notas, pesos):
     executa = True
     msg_erro = "\n"
@@ -152,7 +153,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
 ''''
 
 
