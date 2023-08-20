@@ -101,3 +101,66 @@ Sendo o valor 3 for informado e armazenado na variável número, na tela será i
 11. Revise o código disponibilizado em src/primeiro.py. Em seguida altere o programa
 para que ele se torne generalista, i.e., aceite qualquer quantidade de notas que cada
 aluno pode ter. 
+
+''''
+# Calcular a nota no curso com certo número de alunos
+#
+# Para cada aluno, Ler K notas(reais) e K pesos (inteiros)
+# Cada nota tem um peso definido como uma entrada
+# Caso de teste:
+# 1) peso positivo
+# 2) notas no intervalo de [0,10]
+
+def validar_notas(notas, pesos):
+    executa = True
+    msg_erro = "\n"
+    for i, (nota, peso) in enumerate(zip(notas, pesos)):
+        if nota < 0 or nota > 10:
+            executa = False
+            msg_erro += "Nota %d tem valor inválido\n" % (i+1)
+        if peso <= 0:
+            executa = False
+            msg_erro += "Peso %d tem valor inválido!\n" % (i+1)
+    return executa, msg_erro.strip()
+
+def calcular_media(notas, pesos):
+    temp_nota = sum(nota * peso for nota, peso in zip(notas, pesos))
+    temp_peso = sum(pesos)
+    return temp_nota / temp_peso
+
+def ler_notas(nro_notas):
+    return [float(input("Digite a nota %d: " % (i+1))) for i in range(nro_notas)]
+
+def ler_pesos(nro_notas):
+    return [int(input("Digite o peso da nota %d: " % (i+1))) for i in range(nro_notas)]
+
+def main():
+    nro_alunos = int(input("Número de alunos: "))
+    for i in range(nro_alunos):
+        nro_notas = int(input("\nNúmero de notas para o aluno %d: " % (i+1)))
+        notas = ler_notas(nro_notas)
+        pesos = ler_pesos(nro_notas)
+        
+        executa, msg_erro = validar_notas(notas, pesos)
+        
+        if executa:
+            media = calcular_media(notas, pesos)
+            print("Média do aluno %d: %.2f\n" % (i+1, media))
+        else:
+            print("Entrada de dados inválida!")
+            print(msg_erro)
+
+if __name__ == "__main__":
+    main()
+    
+''''
+
+
+
+
+
+
+
+
+
+
