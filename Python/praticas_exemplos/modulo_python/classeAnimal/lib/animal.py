@@ -30,7 +30,7 @@ class Animal:
         elif especie == "neanderthalensis":
             self._especie = especie
         elif especie == "erectus":
-            self._especie == especie
+            self._especie = especie
         elif especie == "habilis":
             self._especie = especie
         elif especie == "lupus":
@@ -46,5 +46,4 @@ class Animal:
 
     def fazer_som(self):
         pass
-
 
