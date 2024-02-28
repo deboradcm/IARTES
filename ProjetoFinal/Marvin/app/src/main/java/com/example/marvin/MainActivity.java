@@ -1,11 +1,13 @@
 package com.example.marvin;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import com.google.gson.Gson;
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,32 +16,51 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button sendButton = findViewById(R.id.send);
+        sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Capturar as coordenadas do clique
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-
-                // Criar uma instância da classe Evento e preencher seus campos
-                Evento evento = new Evento();
-                evento.setEvento("clique");
-
-                Dados dados = new Dados();
-                dados.setX(x);
-                dados.setY(y);
-
-                evento.setDados(dados);
-
-                // Converter a instância de Evento em JSON
-                Gson gson = new Gson();
-                String jsonEvento = gson.toJson(evento);
-
-                // Aqui você pode enviar o JSON para o servidor, por exemplo:
-                // enviarParaServidor(jsonEvento);
+                enviarDadosParaServidor();
             }
         });
     }
+
+    private void enviarDadosParaServidor() {
+        try {
+            // Criar uma instância da classe Evento e preenche seus campos
+            Evento evento = new Evento();
+            evento.setEvento("clique");
+
+            // Simular coordenadas fixas para exemplo
+            Dados dados = new Dados();
+            dados.setX(100);
+            dados.setY(200);
+
+            evento.setDados(dados);
+
+            // Converter a instância de Evento em JSON
+            Gson gson = new Gson();
+            String jsonEvento = gson.toJson(evento);
+
+            // Crie uma instância do cliente MQTT
+            MqttClient client = new MqttClient("tcp://broker.hivemq.com:1883", MqttClient.generateClientId());
+
+            // Conecte-se ao servidor MQTT
+            client.connect();
+
+            // Criar uma mensagem MQTT com o JSON como payload
+            MqttMessage message = new MqttMessage(jsonEvento.getBytes());
+
+            // Publicar a mensagem em um tópico MQTT
+            client.publish("topic", message);
+
+            // Desconectar do servidor MQTT após a publicação
+            client.disconnect();
+
+        } catch (MqttException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
 
