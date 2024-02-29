@@ -33,42 +33,41 @@ public class MainActivity extends AppCompatActivity {
 
     private void enviarDadosParaServidor() {
         try {
-            // Criar uma instância da classe Evento e preenche seus campos
             Evento evento = new Evento();
             evento.setEvento("clique");
 
-            // Obter as coordenadas do botão
+            // Obtém as coordenadas do botão
             Button sendButton = findViewById(R.id.send);
             int x = (int) sendButton.getX();
             int y = (int) sendButton.getY();
 
-            // Preenchendo as coordenadas no objeto Dados
+            // Preenche as coordenadas no objeto Dados
             Dados dados = new Dados();
             dados.setX(x);
             dados.setY(y);
 
             evento.setDados(dados);
 
-            // Converter a instância de Evento em JSON
+            // Converte a instância de Evento em JSON
             Gson gson = new Gson();
             String jsonEvento = gson.toJson(evento);
 
-            // Imprimir o JSON no Logcat
+            // Imprime o JSON no Logcat
             Log.d("JSON", jsonEvento);
 
-            // Crie uma instância do cliente MQTT
+            // Cria uma instância do cliente MQTT
             MqttClient client = new MqttClient("tcp://broker.hivemq.com:1883", MqttClient.generateClientId());
 
-            // Conecte-se ao servidor MQTT
+            // Conecta-se ao servidor MQTT
             client.connect();
 
-            // Criar uma mensagem MQTT com o JSON como payload
+            // Cria uma mensagem MQTT com o JSON como payload
             MqttMessage message = new MqttMessage(jsonEvento.getBytes());
 
-            // Publicar a mensagem em um tópico MQTT
+            // Publica a mensagem em um tópico MQTT
             client.publish("topic", message);
 
-            // Desconectar do servidor MQTT após a publicação
+            // Desconecta do servidor MQTT após a publicação
             client.disconnect();
 
         } catch (MqttException e) {
