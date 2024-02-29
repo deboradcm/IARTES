@@ -2,6 +2,8 @@ package com.example.marvin;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import com.google.gson.Gson;
@@ -15,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Inicia a assinatura do tópico MQTT
+        MQTTSubscriber subscriber = new MQTTSubscriber();
+        subscriber.start();
 
         Button sendButton = findViewById(R.id.send);
         sendButton.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
             // Converter a instância de Evento em JSON
             Gson gson = new Gson();
             String jsonEvento = gson.toJson(evento);
+
+            // Imprimir o JSON no Logcat
+            Log.d("JSON", jsonEvento);
 
             // Crie uma instância do cliente MQTT
             MqttClient client = new MqttClient("tcp://broker.hivemq.com:1883", MqttClient.generateClientId());
