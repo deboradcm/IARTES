@@ -37,10 +37,15 @@ public class MainActivity extends AppCompatActivity {
             Evento evento = new Evento();
             evento.setEvento("clique");
 
-            // Simular coordenadas fixas para exemplo
+            // Obter as coordenadas do botão
+            Button sendButton = findViewById(R.id.send);
+            int x = (int) sendButton.getX();
+            int y = (int) sendButton.getY();
+
+            // Preenchendo as coordenadas no objeto Dados
             Dados dados = new Dados();
-            dados.setX(100);
-            dados.setY(200);
+            dados.setX(x);
+            dados.setY(y);
 
             evento.setDados(dados);
 
