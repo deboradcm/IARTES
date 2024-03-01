@@ -13,6 +13,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button sendButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +24,16 @@ public class MainActivity extends AppCompatActivity {
         MQTTSubscriber subscriber = new MQTTSubscriber();
         subscriber.start();
 
-        Button sendButton = findViewById(R.id.send);
+        sendButton = findViewById(R.id.send);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 enviarDadosParaServidor();
             }
         });
+
+        // Inicia o movimento aleatório do botão
+        startButtonMovement();
     }
 
     private void enviarDadosParaServidor() {
@@ -37,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             evento.setEvento("clique");
 
             // Obtém as coordenadas do botão
-            Button sendButton = findViewById(R.id.send);
             int x = (int) sendButton.getX();
             int y = (int) sendButton.getY();
 
@@ -74,6 +78,26 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-}
 
+    private void startButtonMovement() {
+        sendButton.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                moveButtonRandomly();
+                startButtonMovement();
+            }
+        }, 2000);
+    }
+
+    private void moveButtonRandomly() {
+        int screenWidth = getWindowManager().getDefaultDisplay().getWidth();
+        int screenHeight = getWindowManager().getDefaultDisplay().getHeight();
+
+        int randomX = (int) (Math.random() * (screenWidth - sendButton.getWidth()));
+        int randomY = (int) (Math.random() * (screenHeight - sendButton.getHeight()));
+
+        sendButton.setX(randomX);
+        sendButton.setY(randomY);
+    }
+}
 
