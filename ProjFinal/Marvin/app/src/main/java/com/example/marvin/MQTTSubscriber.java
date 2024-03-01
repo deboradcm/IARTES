@@ -34,14 +34,20 @@ public class MQTTSubscriber {
                     // Processa a mensagem recebida
                     String payload = new String(message.getPayload());
                     System.out.println("Nova mensagem no tópico '" + topic + "': " + payload);
-
-                    // Aqui você pode adicionar a lógica para lidar com a mensagem
-                    // Por exemplo, atualizar a interface do usuário, armazenar os dados em um banco de dados, etc.
                 }
 
                 @Override
                 public void deliveryComplete(IMqttDeliveryToken token) {
-                    // Implemente o que fazer quando a entrega da mensagem é completa
+                    // Implementa o que fazer quando a entrega da mensagem é completa
+                    // Obtém o ID do token de entrega
+                    int deliveryTokenId = token.getMessageId();
+
+                    // Verifica se a entrega foi bem-sucedida
+                    if (token.isComplete()) {
+                        System.out.println("Mensagem entregue com sucesso. ID do token de entrega: " + deliveryTokenId);
+                    } else {
+                        System.out.println("Falha na entrega da mensagem. ID do token de entrega: " + deliveryTokenId);
+                    }
                 }
             });
 
@@ -56,3 +62,4 @@ public class MQTTSubscriber {
         }
     }
 }
+
