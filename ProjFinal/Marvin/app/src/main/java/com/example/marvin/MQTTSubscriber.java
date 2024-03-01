@@ -1,5 +1,9 @@
 package com.example.marvin;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
+import android.util.Log;
+
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
@@ -26,7 +30,21 @@ public class MQTTSubscriber {
             client.setCallback(new MqttCallback() {
                 @Override
                 public void connectionLost(Throwable cause) {
-                    // Implemente o que fazer quando a conexão é perdida
+                    // Registrar a perda de conexão
+                    Log.d(TAG, "Conexão perdida com o servidor MQTT: " + cause.getMessage());
+
+                    // Tenta reconectar automaticamente
+                    reconnectToBroker(client);
+                }
+
+                private void reconnectToBroker(MqttClient client) {
+                    try {
+                        // Tenta reconectar ao servidor MQTT
+                        client.connect();
+                    } catch (MqttException e) {
+                        e.printStackTrace();
+                        // Lida com erros de reconexão, se necessário
+                    }
                 }
 
                 @Override
@@ -62,4 +80,5 @@ public class MQTTSubscriber {
         }
     }
 }
+
 
