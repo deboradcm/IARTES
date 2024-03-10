@@ -1,28 +1,37 @@
 package com.example.marvin;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.marvin.Dados;
+import com.example.marvin.Evento;
 import com.google.gson.Gson;
+
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button sendButton;
+    private MqttClient mqttClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Inicia a assinatura do tópico MQTT
-        MQTTSubscriber subscriber = new MQTTSubscriber();
-        subscriber.start();
+        // Inicia a conexão MQTT
+        startMqttConnection();
 
         sendButton = findViewById(R.id.send);
         sendButton.setOnClickListener(new View.OnClickListener() {
@@ -36,8 +45,36 @@ public class MainActivity extends AppCompatActivity {
         startButtonMovement();
     }
 
+    private void startMqttConnection() {
+        try {
+            mqttClient = new MqttClient("tcp://broker.hivemq.com:1883", MqttClient.generateClientId());
+            mqttClient.connect();
+
+            mqttClient.setCallback(new MqttCallback() {
+                @Override
+                public void connectionLost(Throwable cause) {
+                    Log.d("MQTT", "Conexão perdida com o servidor MQTT: " + cause.getMessage());
+                    // Reconnect if needed
+                }
+
+                @Override
+                public void messageArrived(String topic, MqttMessage message) throws Exception {
+                    // Not used for publishing
+                }
+
+                @Override
+                public void deliveryComplete(IMqttDeliveryToken token) {
+                    // Not used for publishing
+                }
+            });
+        } catch (MqttException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void enviarDadosParaServidor() {
         try {
+            // Cria um evento e preenche os dados
             Evento evento = new Evento();
             evento.setEvento("clique");
 
@@ -52,27 +89,16 @@ public class MainActivity extends AppCompatActivity {
 
             evento.setDados(dados);
 
-            // Converte a instância de Evento em JSON
+            // Converte o evento em JSON
             Gson gson = new Gson();
             String jsonEvento = gson.toJson(evento);
 
             // Imprime o JSON no Logcat
             Log.d("JSON", jsonEvento);
 
-            // Cria uma instância do cliente MQTT
-            MqttClient client = new MqttClient("tcp://broker.hivemq.com:1883", MqttClient.generateClientId());
-
-            // Conecta-se ao servidor MQTT
-            client.connect();
-
-            // Cria uma mensagem MQTT com o JSON como payload
+            // Publica a mensagem MQTT
             MqttMessage message = new MqttMessage(jsonEvento.getBytes());
-
-            // Publica a mensagem em um tópico MQTT
-            client.publish("topic", message);
-
-            // Desconecta do servidor MQTT após a publicação
-            client.disconnect();
+            mqttClient.publish("android/screen/status", message);
 
         } catch (MqttException e) {
             e.printStackTrace();
@@ -93,11 +119,11 @@ public class MainActivity extends AppCompatActivity {
         int screenWidth = getWindowManager().getDefaultDisplay().getWidth();
         int screenHeight = getWindowManager().getDefaultDisplay().getHeight();
 
-        int randomX = (int) (Math.random() * (screenWidth - sendButton.getWidth()));
-        int randomY = (int) (Math.random() * (screenHeight - sendButton.getHeight()));
+        Random random = new Random();
+        int randomX = random.nextInt(screenWidth - sendButton.getWidth());
+        int randomY = random.nextInt(screenHeight - sendButton.getHeight());
 
         sendButton.setX(randomX);
         sendButton.setY(randomY);
     }
 }
-
