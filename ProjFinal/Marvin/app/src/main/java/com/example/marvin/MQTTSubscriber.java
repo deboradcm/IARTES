@@ -15,7 +15,7 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 public class MQTTSubscriber {
 
     private static final String BROKER_URL = "tcp://broker.hivemq.com:1883"; // Endereço do servidor MQTT
-    private static final String TOPIC = "seu/topico"; // Tópico MQTT que desejo assinar
+    private static final String TOPIC = "android/screen/status"; // Tópico MQTT que desejo assinar
 
     public void start() {
         try {
