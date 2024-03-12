@@ -1,5 +1,7 @@
 package com.example.marvin;
 
+import com.example.marvin.Dados;
+
 public class Evento {
     private String evento;
     private Dados dados;
