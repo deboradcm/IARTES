@@ -38,6 +38,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
     implementation("com.google.code.gson:gson:2.8.8")
+    implementation("androidx.core:core-ktx:1.12.0")
+
 
 
 

@@ -6,29 +6,114 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:text="MARVIN"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
-
     <Button
         android:id="@+id/send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#EA4848"
         android:onClick="sendJson"
         android:text="SEND JSON"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/northButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000FF"
+        android:textColor="#FFFFFF"
+        android:text="North Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/southButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FF00"
+        android:textColor="#000000"
+        android:text="South Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/topLeftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000FF"
+        android:textColor="#FFFFFF"
+        android:text="Top Left Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/topRightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000FF"
+        android:textColor="#FFFFFF"
+        android:text="Top Right Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bottomLeftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FF00"
+        android:textColor="#000000"
+        android:text="Bottom Left Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/bottomRightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FF00"
+        android:textColor="#000000"
+        android:text="Bottom Right Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/randomCornerButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Corner 1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:background="@drawable/rounded_button"
+        android:padding="8dp"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/randomCornerButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Corner 2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:background="@drawable/rounded_button"
+        android:padding="8dp"
+        android:layout_margin="8dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Adicione a BackgroundView -->
+        <com.example.marvin.BackgroundView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
 
 
 

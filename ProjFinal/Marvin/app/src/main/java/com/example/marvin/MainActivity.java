@@ -3,6 +3,7 @@ package com.example.marvin;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,15 @@ import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence;
 public class MainActivity extends AppCompatActivity {
 
     private Button sendButton;
+    private Button northButton;
+    private Button southButton;
+    private Button topLeftButton;
+    private Button topRightButton;
+    private Button bottomLeftButton;
+    private Button bottomRightButton;
+
+    private Button randomCornerButton1;
+    private Button randomCornerButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
         subscriber.start();
 
         sendButton = findViewById(R.id.send);
+        northButton = findViewById(R.id.northButton);
+        southButton = findViewById(R.id.southButton);
+        topLeftButton = findViewById(R.id.topLeftButton);
+        topRightButton = findViewById(R.id.topRightButton);
+        bottomLeftButton = findViewById(R.id.bottomLeftButton);
+        bottomRightButton = findViewById(R.id.bottomRightButton);
+        randomCornerButton1 = findViewById(R.id.randomCornerButton1);
+        randomCornerButton2 = findViewById(R.id.randomCornerButton2);
+
+
+
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +55,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Inicia o movimento aleatório do botão
-        startButtonMovement();
+        startButtonMovement(sendButton);
+        startButtonMovement(northButton);
+        startButtonMovement(southButton);
+        startButtonMovement(topLeftButton);
+        startButtonMovement(topRightButton);
+        startButtonMovement(bottomLeftButton);
+        startButtonMovement(bottomRightButton);
+
+
+
     }
 
     private void enviarDadosParaServidor() {
@@ -84,24 +114,60 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void startButtonMovement() {
-        sendButton.postDelayed(new Runnable() {
+    private void startButtonMovement(final Button button) {
+        button.postDelayed(new Runnable() {
             @Override
             public void run() {
-                moveButtonRandomly();
-                startButtonMovement();
+                moveButtonRandomly(button);
+                startButtonMovement(button);
             }
         }, 2000);
     }
 
-    private void moveButtonRandomly() {
-        int screenWidth = getWindowManager().getDefaultDisplay().getWidth();
-        int screenHeight = getWindowManager().getDefaultDisplay().getHeight();
+    private void moveButtonRandomly(Button button) {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int screenWidth = displayMetrics.widthPixels;
+        int screenHeight = displayMetrics.heightPixels;
 
-        int randomX = (int) (Math.random() * (screenWidth - sendButton.getWidth()));
-        int randomY = (int) (Math.random() * (screenHeight - sendButton.getHeight()));
+        int buttonWidth = button.getWidth();
+        int buttonHeight = button.getHeight();
 
-        sendButton.setX(randomX);
-        sendButton.setY(randomY);
+        int margin = 100; // Margem de 100 pixels em todas as direções
+
+        int randomX;
+        int randomY;
+
+        if (button == northButton) {
+            randomX = (int) (Math.random() * (screenWidth - 2 * margin - buttonWidth) + margin);
+            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + margin);
+        } else if (button == southButton) {
+            randomX = (int) (Math.random() * (screenWidth - 2 * margin - buttonWidth) + margin);
+            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + (screenHeight / 2) + margin);
+        } else if (button == topLeftButton) {
+            randomX = (int) (Math.random() * (screenWidth / 2 - buttonWidth - margin) + margin);
+            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + margin);
+        } else if (button == topRightButton) {
+            randomX = (int) (Math.random() * (screenWidth / 2 - buttonWidth - margin) + (screenWidth / 2) + margin);
+            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + margin);
+        } else if (button == bottomLeftButton) {
+            randomX = (int) (Math.random() * (screenWidth / 2 - buttonWidth - margin) + margin);
+            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + (screenHeight / 2) + margin);
+        } else if (button == bottomRightButton) {
+            randomX = (int) (Math.random() * (screenWidth / 2 - buttonWidth - margin) + (screenWidth / 2) + margin);
+            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + (screenHeight / 2) + margin);
+        } else {
+            randomX = (int) (Math.random() * (screenWidth - buttonWidth - 2 * margin) + margin);
+            randomY = (int) (Math.random() * (screenHeight - buttonHeight - 2 * margin) + margin);
+        }
+
+        button.setX(randomX);
+        button.setY(randomY);
     }
+
+
+
+
+
+
 }
