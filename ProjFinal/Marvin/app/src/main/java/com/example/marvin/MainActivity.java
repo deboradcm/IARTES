@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
             MqttMessage message = new MqttMessage(jsonEvento.toString().getBytes());
 
             // Publica a mensagem em um tópico MQTT
-            client.publish("seu/topico", message);
+            client.publish("app/robot_interactions", message);
 
             // Desconecta do servidor MQTT após a publicação
             client.disconnect();
