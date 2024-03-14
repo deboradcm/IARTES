@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Inicia o movimento aleatório do botão
+        // Inicia o movimento aleatório dos botões
         startButtonMovement(wandering1);
         startButtonMovement(wandering2);
         startButtonMovement(wandering3);
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
             Evento evento = new Evento();
             evento.setEvento("click");
 
-            // Obtém as coordenadas do botão
+            // Obtém as coordenadas dos botões
             int x = (int) view.getX();
             int y = (int) view.getY();
 
@@ -280,52 +280,6 @@ public class MainActivity extends AppCompatActivity {
         button.setX(randomX);
         button.setY(randomY);
     }
-
-    private void moveButtonAlongBorder(Button button) {
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int screenWidth = displayMetrics.widthPixels;
-        int screenHeight = displayMetrics.heightPixels;
-
-        int buttonWidth = button.getWidth();
-        int buttonHeight = button.getHeight();
-
-        // Margem de 0 pixels para que os botões toquem as bordas
-        int margin = 0;
-
-        int randomX;
-        int randomY;
-
-        // Gera um número aleatório entre 0 e 3 para escolher uma borda
-        int border = (int) (Math.random() * 4);
-
-        // Move o botão ao longo da borda selecionada
-        switch (border) {
-            case 0: // Superior
-                randomX = (int) (Math.random() * (screenWidth - buttonWidth));
-                randomY = margin;
-                break;
-            case 1: // Inferior
-                randomX = (int) (Math.random() * (screenWidth - buttonWidth));
-                randomY = screenHeight - buttonHeight;
-                break;
-            case 2: // Esquerda
-                randomX = margin;
-                randomY = (int) (Math.random() * (screenHeight - buttonHeight));
-                break;
-            case 3: // Direita
-                randomX = screenWidth - buttonWidth;
-                randomY = (int) (Math.random() * (screenHeight - buttonHeight));
-                break;
-            default:
-                randomX = 0;
-                randomY = 0;
-        }
-
-        button.setX(randomX);
-        button.setY(randomY);
-    }
-
 
 
 }

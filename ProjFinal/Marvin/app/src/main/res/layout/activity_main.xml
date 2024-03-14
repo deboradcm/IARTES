@@ -119,8 +119,8 @@
         android:id="@+id/randomCornerButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="randomCornerButton1"
-        android:tag="wandering1"
+        android:text="Border1"
+        android:tag="randomCornerButton1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="#B0B0B0"/>
@@ -130,8 +130,8 @@
         android:id="@+id/randomCornerButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="randomCornerButton2"
-        android:tag="wandering1"
+        android:text="Border2"
+        android:tag="randomCornerButton2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="#B0B0B0"/>
@@ -142,7 +142,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Adicione a BackgroundView -->
         <com.example.marvin.BackgroundView
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
