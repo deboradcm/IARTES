@@ -308,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isDragging = false;
-    private float startX, startY; // Estas variáveis estão corretamente declaradas no escopo da classe
+    private float startX, startY; 
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -319,13 +319,13 @@ public class MainActivity extends AppCompatActivity {
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                startX = event.getX(); // Aqui você está tentando acessar a variável startX
-                startY = event.getY(); // Aqui você está tentando acessar a variável startY
+                startX = event.getX(); // acessando a variável startX
+                startY = event.getY(); // acessando a variável startY
                 isDragging = false;
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (!isDragging && isDragging(x, y)) {
-                    // Se o usuário começar a arrastar, marque como arrastando
+                    // Se o usuário começar a arrastar, é marcado como arrastando
                     isDragging = true;
                     enviarDadosParaServidor("button_drag_start", x, y, "");
                 }
@@ -333,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
 
             case MotionEvent.ACTION_UP:
                 if (isDragging) {
-                    // Se o usuário estava arrastando e parou, envie uma mensagem indicando o fim do arrasto
+                    // Se o usuário estava arrastando e parou, é enviada uma mensagem indicando o fim do arrasto
                     enviarDadosParaServidor("button_drag_end", x, y, "");
                     isDragging = false;
                 } else {
@@ -377,7 +377,7 @@ public class MainActivity extends AppCompatActivity {
         return distance > TOUCH_SLOP;
     }
 
-    private static final int TOUCH_SLOP = 20; // Defina o valor adequado para sua aplicação
+    private static final int TOUCH_SLOP = 20;
 
 
 
