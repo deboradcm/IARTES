@@ -54,9 +54,80 @@ public class MainActivity extends AppCompatActivity {
         wandering1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor();
+                enviarDadosParaServidor(view);
             }
         });
+
+        wandering2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        wandering3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        northButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        southButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        topLeftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        topRightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        bottomLeftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        bottomRightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        randomCornerButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
+        randomCornerButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarDadosParaServidor(view);
+            }
+        });
+
 
         // Inicia o movimento aleatório do botão
         startButtonMovement(wandering1);
@@ -68,25 +139,27 @@ public class MainActivity extends AppCompatActivity {
         startButtonMovement(topRightButton);
         startButtonMovement(bottomLeftButton);
         startButtonMovement(bottomRightButton);
-
-        // Inicia o movimento aleatório nos botões do canto
         startButtonMovement(randomCornerButton1);
         startButtonMovement(randomCornerButton2);
     }
 
-    private void enviarDadosParaServidor() {
+    private void enviarDadosParaServidor(View view) {
         try {
             Evento evento = new Evento();
             evento.setEvento("click");
 
             // Obtém as coordenadas do botão
-            int x = (int) wandering1.getX();
-            int y = (int) wandering1.getY();
+            int x = (int) view.getX();
+            int y = (int) view.getY();
 
-            // Preenche as coordenadas no objeto Dados
+            // Obtém a tag do botão clicado
+            String buttonTag = (String) view.getTag();
+
+            // Preenche as coordenadas e a tag do botão no objeto Dados
             Dados dados = new Dados();
             dados.setX(x);
             dados.setY(y);
+            dados.setButtonTag(buttonTag);
 
             evento.setDados(dados);
 
@@ -94,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
             JSONObject jsonEvento = new JSONObject();
             jsonEvento.put("x", evento.getDados().getX());
             jsonEvento.put("y", evento.getDados().getY());
+            jsonEvento.put("button", evento.getDados().getButtonTag()); // Use button_tag em vez de button_id
             jsonEvento.put("event", evento.getEvento());
 
             // Imprime o JSON no Logcat
