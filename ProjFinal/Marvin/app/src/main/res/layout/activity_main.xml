@@ -2,17 +2,43 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/send"
+        android:id="@+id/wandering1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#EA4848"
-        android:onClick="sendJson"
-        android:text="SEND JSON"
+        android:onClick="wandering1"
+        android:text="Wandering1"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/wandering2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EA4848"
+        android:onClick="wandering2"
+        android:text="Wandering2"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/wandering3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EA4848"
+        android:onClick="wandering3"
+        android:text="Wandering3"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +51,8 @@
         android:layout_height="wrap_content"
         android:background="#0000FF"
         android:textColor="#FFFFFF"
-        android:text="North Button"
+        android:textSize="12sp"
+        android:text="North"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,9 +60,9 @@
         android:id="@+id/southButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00FF00"
+        android:background="#008000"
         android:textColor="#000000"
-        android:text="South Button"
+        android:text="South"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -43,9 +70,9 @@
         android:id="@+id/topLeftButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#0000FF"
+        android:background="#6495ED"
         android:textColor="#FFFFFF"
-        android:text="Top Left Button"
+        android:text="Top Left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,9 +80,9 @@
         android:id="@+id/topRightButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#0000FF"
+        android:background="#6495ED"
         android:textColor="#FFFFFF"
-        android:text="Top Right Button"
+        android:text="Top Right"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,7 +92,7 @@
         android:layout_height="wrap_content"
         android:background="#00FF00"
         android:textColor="#000000"
-        android:text="Bottom Left Button"
+        android:text="Bottom Left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -75,7 +102,7 @@
         android:layout_height="wrap_content"
         android:background="#00FF00"
         android:textColor="#000000"
-        android:text="Bottom Right Button"
+        android:text="Bottom Right"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -83,25 +110,22 @@
         android:id="@+id/randomCornerButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Random Corner 1"
+        android:text="Border1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:background="@drawable/rounded_button"
-        android:padding="8dp"
-        android:layout_margin="8dp"/>
+        android:background="#B0B0B0"/>
+
 
     <Button
         android:id="@+id/randomCornerButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Random Corner 2"
+        android:text="Border2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:background="@drawable/rounded_button"
-        android:padding="8dp"
-        android:layout_margin="8dp"/>
+        android:background="#B0B0B0"/>
+
+
 
     <FrameLayout
         android:layout_width="match_parent"
