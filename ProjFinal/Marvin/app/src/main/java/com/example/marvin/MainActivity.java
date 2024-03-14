@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import com.google.gson.Gson;
@@ -54,77 +55,110 @@ public class MainActivity extends AppCompatActivity {
         wandering1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         wandering2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         wandering3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         northButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         southButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         topLeftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         topRightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         bottomLeftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         bottomRightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         randomCornerButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
         randomCornerButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                enviarDadosParaServidor(view);
+                int x = (int) view.getX();
+                int y = (int) view.getY();
+                String buttonTag = (String) view.getTag();
+                enviarDadosParaServidor("click", x, y, buttonTag);
             }
         });
 
@@ -143,17 +177,10 @@ public class MainActivity extends AppCompatActivity {
         startButtonMovement(randomCornerButton2);
     }
 
-    private void enviarDadosParaServidor(View view) {
+    private void enviarDadosParaServidor(String evento, int x, int y, String buttonTag) {
         try {
-            Evento evento = new Evento();
-            evento.setEvento("click");
-
-            // Obtém as coordenadas dos botões
-            int x = (int) view.getX();
-            int y = (int) view.getY();
-
-            // Obtém a tag do botão clicado
-            String buttonTag = (String) view.getTag();
+            Evento eventoObj = new Evento();
+            eventoObj.setEvento(evento);
 
             // Preenche as coordenadas e a tag do botão no objeto Dados
             Dados dados = new Dados();
@@ -161,17 +188,16 @@ public class MainActivity extends AppCompatActivity {
             dados.setY(y);
             dados.setButtonTag(buttonTag);
 
-            evento.setDados(dados);
+            eventoObj.setDados(dados);
 
-            // Converte a instância de Evento em JSON
             JSONObject jsonEvento = new JSONObject();
-            jsonEvento.put("x", evento.getDados().getX());
-            jsonEvento.put("y", evento.getDados().getY());
-            jsonEvento.put("button", evento.getDados().getButtonTag()); // Use button_tag em vez de button_id
-            jsonEvento.put("event", evento.getEvento());
-
-            // Imprime o JSON no Logcat
-            Log.d("JSON", jsonEvento.toString());
+            jsonEvento.put("x", eventoObj.getDados().getX());
+            jsonEvento.put("y", eventoObj.getDados().getY());
+            jsonEvento.put("event", eventoObj.getEvento());
+            // Verifica se a tag do botão não está vazia antes de adicioná-la ao JSON
+            if (!eventoObj.getDados().getButtonTag().isEmpty()) {
+                jsonEvento.put("button", eventoObj.getDados().getButtonTag());
+            }
 
             // Obtém o caminho para o diretório de persistência de arquivos
             String persistencePath = getApplicationContext().getFilesDir().getAbsolutePath();
@@ -280,6 +306,82 @@ public class MainActivity extends AppCompatActivity {
         button.setX(randomX);
         button.setY(randomY);
     }
+
+    private boolean isDragging = false;
+    private float startX, startY; // Estas variáveis estão corretamente declaradas no escopo da classe
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.d("TOUCH_EVENT", "X: " + event.getX() + ", Y: " + event.getY() + ", Action: " + event.getAction());
+
+        int x = (int) event.getX();
+        int y = (int) event.getY();
+
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                startX = event.getX(); // Aqui você está tentando acessar a variável startX
+                startY = event.getY(); // Aqui você está tentando acessar a variável startY
+                isDragging = false;
+                break;
+            case MotionEvent.ACTION_MOVE:
+                if (!isDragging && isDragging(x, y)) {
+                    // Se o usuário começar a arrastar, marque como arrastando
+                    isDragging = true;
+                    enviarDadosParaServidor("button_drag_start", x, y, "");
+                }
+                break;
+
+            case MotionEvent.ACTION_UP:
+                if (isDragging) {
+                    // Se o usuário estava arrastando e parou, envie uma mensagem indicando o fim do arrasto
+                    enviarDadosParaServidor("button_drag_end", x, y, "");
+                    isDragging = false;
+                } else {
+                    // Se não houve arrasto e o dedo foi levantado, verifique se foi um clique fora dos botões
+                    if (!isInsideButton(x, y)) {
+                        enviarDadosParaServidor("click_outside_button", x, y, "");
+                    }
+                }
+                break;
+        }
+
+        return super.onTouchEvent(event);
+    }
+
+    private boolean isInsideButton(int x, int y) {
+        // Verifica cada botão individualmente
+        if (isInsideView(x, y, wandering1) || isInsideView(x, y, wandering2) || isInsideView(x, y, wandering3) ||
+                isInsideView(x, y, northButton) || isInsideView(x, y, southButton) || isInsideView(x, y, topLeftButton) ||
+                isInsideView(x, y, topRightButton) || isInsideView(x, y, bottomLeftButton) || isInsideView(x, y, bottomRightButton) ||
+                isInsideView(x, y, randomCornerButton1) || isInsideView(x, y, randomCornerButton2)) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isInsideView(int x, int y, View view) {
+        int[] location = new int[2];
+        view.getLocationOnScreen(location);
+        int viewX = location[0];
+        int viewY = location[1];
+        int viewWidth = view.getWidth();
+        int viewHeight = view.getHeight();
+
+        return (x >= viewX && x <= (viewX + viewWidth) && y >= viewY && y <= (viewY + viewHeight));
+    }
+
+    private boolean isDragging(int x, int y) {
+        // Calcula a distância entre o ponto inicial e o ponto atual
+        double distance = Math.sqrt(Math.pow(x - startX, 2) + Math.pow(y - startY, 2));
+        // Se a distância for maior que um determinado limite, consideramos que o usuário está arrastando
+        return distance > TOUCH_SLOP;
+    }
+
+    private static final int TOUCH_SLOP = 20; // Defina o valor adequado para sua aplicação
+
+
+
+
 
 
 }
