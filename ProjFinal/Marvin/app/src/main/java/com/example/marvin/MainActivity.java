@@ -12,10 +12,14 @@ import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button sendButton;
+    private Button wandering1;
+    private Button wandering2;
+    private Button wandering3;
     private Button northButton;
     private Button southButton;
     private Button topLeftButton;
@@ -35,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         MQTTSubscriber subscriber = new MQTTSubscriber();
         subscriber.start();
 
-        sendButton = findViewById(R.id.send);
+        wandering1 = findViewById(R.id.wandering1);
+        wandering2 = findViewById(R.id.wandering2);
+        wandering3 = findViewById(R.id.wandering3);
         northButton = findViewById(R.id.northButton);
         southButton = findViewById(R.id.southButton);
         topLeftButton = findViewById(R.id.topLeftButton);
@@ -45,9 +51,7 @@ public class MainActivity extends AppCompatActivity {
         randomCornerButton1 = findViewById(R.id.randomCornerButton1);
         randomCornerButton2 = findViewById(R.id.randomCornerButton2);
 
-
-
-        sendButton.setOnClickListener(new View.OnClickListener() {
+        wandering1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 enviarDadosParaServidor();
@@ -55,7 +59,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Inicia o movimento aleatório do botão
-        startButtonMovement(sendButton);
+        startButtonMovement(wandering1);
+        startButtonMovement(wandering2);
+        startButtonMovement(wandering3);
         startButtonMovement(northButton);
         startButtonMovement(southButton);
         startButtonMovement(topLeftButton);
@@ -63,18 +69,19 @@ public class MainActivity extends AppCompatActivity {
         startButtonMovement(bottomLeftButton);
         startButtonMovement(bottomRightButton);
 
-
-
+        // Inicia o movimento aleatório nos botões do canto
+        startButtonMovement(randomCornerButton1);
+        startButtonMovement(randomCornerButton2);
     }
 
     private void enviarDadosParaServidor() {
         try {
             Evento evento = new Evento();
-            evento.setEvento("clique");
+            evento.setEvento("click");
 
             // Obtém as coordenadas do botão
-            int x = (int) sendButton.getX();
-            int y = (int) sendButton.getY();
+            int x = (int) wandering1.getX();
+            int y = (int) wandering1.getY();
 
             // Preenche as coordenadas no objeto Dados
             Dados dados = new Dados();
@@ -84,11 +91,13 @@ public class MainActivity extends AppCompatActivity {
             evento.setDados(dados);
 
             // Converte a instância de Evento em JSON
-            Gson gson = new Gson();
-            String jsonEvento = gson.toJson(evento);
+            JSONObject jsonEvento = new JSONObject();
+            jsonEvento.put("x", evento.getDados().getX());
+            jsonEvento.put("y", evento.getDados().getY());
+            jsonEvento.put("event", evento.getEvento());
 
             // Imprime o JSON no Logcat
-            Log.d("JSON", jsonEvento);
+            Log.d("JSON", jsonEvento.toString());
 
             // Obtém o caminho para o diretório de persistência de arquivos
             String persistencePath = getApplicationContext().getFilesDir().getAbsolutePath();
@@ -100,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             client.connect();
 
             // Cria uma mensagem MQTT com o JSON como payload
-            MqttMessage message = new MqttMessage(jsonEvento.getBytes());
+            MqttMessage message = new MqttMessage(jsonEvento.toString().getBytes());
 
             // Publica a mensagem em um tópico MQTT
             client.publish("seu/topico", message);
@@ -108,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             // Desconecta do servidor MQTT após a publicação
             client.disconnect();
 
-        } catch (MqttException e) {
+        } catch (MqttException | JSONException e) {
             e.printStackTrace();
         }
     }
@@ -118,7 +127,11 @@ public class MainActivity extends AppCompatActivity {
         button.postDelayed(new Runnable() {
             @Override
             public void run() {
-                moveButtonRandomly(button);
+                if(button == randomCornerButton1 || button == randomCornerButton2) {
+                    moveButtonRandomlyBorder(button);
+                } else {
+                    moveButtonRandomly(button);
+                }
                 startButtonMovement(button);
             }
         }, 2000);
@@ -166,7 +179,78 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void moveButtonRandomlyBorder(Button button) {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int screenWidth = displayMetrics.widthPixels;
+        int screenHeight = displayMetrics.heightPixels;
 
+        int buttonWidth = button.getWidth();
+        int buttonHeight = button.getHeight();
+
+        // Margem de 0 pixels para que os botões toquem as bordas
+        int margin = 0;
+
+        int randomX;
+        int randomY;
+
+        // Movimento ao longo das bordas e nos cantos
+        if (Math.random() < 0.5) { // Movimento horizontal
+            randomX = (int) (Math.random() * (screenWidth - buttonWidth));
+            randomY = Math.random() < 0.5 ? margin : screenHeight - buttonHeight;
+        } else { // Movimento vertical
+            randomX = Math.random() < 0.5 ? margin : screenWidth - buttonWidth;
+            randomY = (int) (Math.random() * (screenHeight - buttonHeight));
+        }
+
+        button.setX(randomX);
+        button.setY(randomY);
+    }
+
+    private void moveButtonAlongBorder(Button button) {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int screenWidth = displayMetrics.widthPixels;
+        int screenHeight = displayMetrics.heightPixels;
+
+        int buttonWidth = button.getWidth();
+        int buttonHeight = button.getHeight();
+
+        // Margem de 0 pixels para que os botões toquem as bordas
+        int margin = 0;
+
+        int randomX;
+        int randomY;
+
+        // Gera um número aleatório entre 0 e 3 para escolher uma borda
+        int border = (int) (Math.random() * 4);
+
+        // Move o botão ao longo da borda selecionada
+        switch (border) {
+            case 0: // Superior
+                randomX = (int) (Math.random() * (screenWidth - buttonWidth));
+                randomY = margin;
+                break;
+            case 1: // Inferior
+                randomX = (int) (Math.random() * (screenWidth - buttonWidth));
+                randomY = screenHeight - buttonHeight;
+                break;
+            case 2: // Esquerda
+                randomX = margin;
+                randomY = (int) (Math.random() * (screenHeight - buttonHeight));
+                break;
+            case 3: // Direita
+                randomX = screenWidth - buttonWidth;
+                randomY = (int) (Math.random() * (screenHeight - buttonHeight));
+                break;
+            default:
+                randomX = 0;
+                randomY = 0;
+        }
+
+        button.setX(randomX);
+        button.setY(randomY);
+    }
 
 
 
