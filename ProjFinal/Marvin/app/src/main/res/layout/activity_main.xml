@@ -10,15 +10,14 @@
         android:id="@+id/wandering1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#EA4848"
+        android:visibility="gone"
         android:onClick="wandering1"
-        android:text="Wandering1"
-        android:textColor="#000000"
         android:tag="wandering1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#B0B0B0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/wandering2"
@@ -26,9 +25,9 @@
         android:layout_height="wrap_content"
         android:background="#EA4848"
         android:onClick="wandering2"
-        android:text="Wandering2"
         android:textColor="#000000"
         android:tag="wandering2"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,9 +39,9 @@
         android:layout_height="wrap_content"
         android:background="#EA4848"
         android:onClick="wandering3"
-        android:text="Wandering3"
-        android:textColor="#000000"
         android:tag="wandering3"
+        android:visibility="gone"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,9 +53,10 @@
         android:layout_height="wrap_content"
         android:background="#0000FF"
         android:textColor="#FFFFFF"
+        android:onClick="northButton"
         android:tag="northButton"
         android:textSize="12sp"
-        android:text="North"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,8 +66,9 @@
         android:layout_height="wrap_content"
         android:background="#008000"
         android:textColor="#000000"
+        android:onClick="southhButton"
         android:tag="southButton"
-        android:text="South"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -77,8 +78,9 @@
         android:layout_height="wrap_content"
         android:background="#6495ED"
         android:textColor="#FFFFFF"
+        android:onClick="topLefthButton"
         android:tag="topLeftButton"
-        android:text="Top Left"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,67 +90,47 @@
         android:layout_height="wrap_content"
         android:background="#6495ED"
         android:textColor="#FFFFFF"
+        android:onClick="topRightButton"
         android:tag="topRightButton"
-        android:text="Top Right"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bottomLeftButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
         android:background="#00FF00"
         android:textColor="#000000"
+        android:onClick="bottomLeftButton"
         android:tag="bottomLeftButton"
-        android:text="Bottom Left"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:id="@+id/bottomRightButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
         android:background="#00FF00"
         android:textColor="#000000"
+        android:onClick="bottomRightButton"
         android:tag="bottomRightButton"
-        android:text="Bottom Right"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+
     <Button
         android:id="@+id/randomCornerButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Border1"
-        android:tag="randomCornerButton1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="#B0B0B0"/>
-
-
-    <Button
-        android:id="@+id/randomCornerButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Border2"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:visibility="visible"
+        android:onClick="randomCornerButton1"
         android:tag="randomCornerButton2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="#B0B0B0"/>
-
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.example.marvin.BackgroundView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </FrameLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
