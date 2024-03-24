@@ -84,9 +84,9 @@ public class ButtonBorder {
 
         switch (edge) {
             case 0: // Borda superior
-                randomX = random.nextInt(screenWidth - buttonWidth);
+                randomX = random.nextInt(900);
                 Log.d("ButtonBorder", "caso 0 X: " + randomX);
-                randomY = 280; // Ajustando para a borda superior
+                randomY = 0;
                 Log.d("ButtonBorder", "caso 0 Y: " + randomY);
                 Log.d("ButtonBorder", "Largura do botão: " + buttonWidth);
                 Log.d("ButtonBorder", "Altura do botão: " + buttonHeight);
@@ -95,9 +95,9 @@ public class ButtonBorder {
                 button.setY(randomY);
                 break;
             case 1: // Borda direita
-                randomX = 1068 - buttonWidth; // Ajustando para a borda direita
+                randomX = 870;
+                randomY = random.nextInt(2000);
                 Log.d("ButtonBorder", "caso 1 X: " + randomX);
-                randomY = random.nextInt(2050); // Limitando entre 291 e 2267
                 Log.d("ButtonBorder", "caso 1 Y: " + randomY);
                 Log.d("ButtonBorder", "Largura do botão: " + buttonWidth);
                 Log.d("ButtonBorder", "Altura do botão: " + buttonHeight);
@@ -106,9 +106,9 @@ public class ButtonBorder {
                 button.setY(randomY);
                 break;
             case 2: // Borda inferior
-                randomX = random.nextInt(screenWidth - buttonWidth);
+                randomX = random.nextInt(900);
+                randomY = 500;
                 Log.d("ButtonBorder", "caso 2 X: " + randomX);
-                randomY = 2000; // Ajustando para a borda inferior
                 Log.d("ButtonBorder", "caso 2 Y: " + randomY);
                 Log.d("ButtonBorder", "Largura do botão: " + buttonWidth);
                 Log.d("ButtonBorder", "Altura do botão: " + buttonHeight);
@@ -117,9 +117,9 @@ public class ButtonBorder {
                 button.setY(randomY);
                 break;
             case 3: // Borda esquerda
-                randomX = 0; // Ajustando para a borda esquerda
+                randomX = 0;
                 Log.d("ButtonBorder", "caso 3 X: " + randomX);
-                randomY = random.nextInt(2050); // Limitando entre 291 e 2267
+                randomY = random.nextInt(2050);
                 Log.d("ButtonBorder", "caso 3 Y: " + randomY);
                 Log.d("ButtonBorder", "Largura do botão: " + buttonWidth);
                 Log.d("ButtonBorder", "Altura do botão: " + buttonHeight);
