@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Marvin</string>
+    <string name="border_text">Border</string>
 </resources>

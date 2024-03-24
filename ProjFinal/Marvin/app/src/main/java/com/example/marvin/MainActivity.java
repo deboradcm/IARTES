@@ -1,6 +1,5 @@
 package com.example.marvin;
 
-import android.graphics.Rect;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,19 +9,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import com.google.gson.Gson;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.Random;
 
 
-
-
-
- public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private Button wandering1;
     private Button wandering2;
@@ -35,7 +31,7 @@ import org.json.JSONObject;
     private Button bottomRightButton;
 
     private Button randomCornerButton1;
-    private Button randomCornerButton2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +54,7 @@ import org.json.JSONObject;
         randomCornerButton1 = findViewById(R.id.randomCornerButton1);
 
 
-        wandering1.setOnClickListener(new View.OnClickListener() {
+        /*wandering1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int x = (int) view.getX();
@@ -146,34 +142,26 @@ import org.json.JSONObject;
                 String buttonTag = (String) view.getTag();
                 sendDataToServer("click", x, y, buttonTag);
             }
-        });
+        });*/
 
-        randomCornerButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                sendDataToServer("click", x, y, buttonTag);
-            }
-        });
-
-
-
+        //ButtonBorder ButtonBorder = new ButtonBorder();
         WindowManager windowManager = getWindowManager();
-        ButtonBorder.setupRandomMoveOnClick(randomCornerButton1, windowManager, northButton);
-        ButtonNorth.setupRandomMoveOnClick(northButton, windowManager,southButton );
+        ButtonBorder.setupRandomMoveOnClick(randomCornerButton1, windowManager, northButton, this );
+
+        /*ButtonNorth.setupRandomMoveOnClick(northButton, windowManager,southButton );
         ButtonSouth.setupRandomMoveOnClick(southButton, windowManager, topRightButton);
         ButtonTopRight.setupRandomMoveOnClick(topRightButton, windowManager, topLeftButton);
         ButtonTopLeft.setupRandomMoveOnClick(topLeftButton, windowManager, bottomRightButton);
         ButtonBottomRight.setupRandomMoveOnClick(bottomRightButton, windowManager, bottomLeftButton);
         ButtonBottomLeft.setupRandomMoveOnClick(bottomLeftButton, windowManager, wandering1);
-        ButtonWandering.setupRandomMoveOnClick(wandering1, windowManager, wandering2);
+        ButtonWandering.setupRandomMoveOnClick(wandering1, windowManager, wandering2);*/
 
 
     }
 
-    private void sendDataToServer(String evento, int x, int y, String buttonTag) {
+
+
+    public void sendDataToServer(String evento, int x, int y, String buttonTag) {
         try {
             Evento eventoObj = new Evento();
             eventoObj.setEvento(evento);
@@ -214,7 +202,7 @@ import org.json.JSONObject;
             client.disconnect();
 
         } catch (MqttException | JSONException e) {
-            e.printStackTrace();
+            Log.e("TAG", "Erro ao processar MQTT ou JSON: " + e.getMessage(), e);
         }
     }
 
@@ -264,7 +252,7 @@ import org.json.JSONObject;
         if (isInsideView(x, y, wandering1) || isInsideView(x, y, wandering2) || isInsideView(x, y, wandering3) ||
                 isInsideView(x, y, northButton) || isInsideView(x, y, southButton) || isInsideView(x, y, topLeftButton) ||
                 isInsideView(x, y, topRightButton) || isInsideView(x, y, bottomLeftButton) || isInsideView(x, y, bottomRightButton) ||
-                isInsideView(x, y, randomCornerButton1) || isInsideView(x, y, randomCornerButton2)) {
+                isInsideView(x, y, randomCornerButton1)) {
             return true;
         }
         return false;
@@ -290,5 +278,9 @@ import org.json.JSONObject;
 
     private static final int TOUCH_SLOP = 20;
 
+
 }
+
+
+
 
