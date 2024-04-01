@@ -7,14 +7,16 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
-import com.google.gson.Gson;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bottomRightButton;
 
     private Button randomCornerButton1;
-    private Button randomCornerButton2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,134 +52,20 @@ public class MainActivity extends AppCompatActivity {
         bottomLeftButton = findViewById(R.id.bottomLeftButton);
         bottomRightButton = findViewById(R.id.bottomRightButton);
         randomCornerButton1 = findViewById(R.id.randomCornerButton1);
-        randomCornerButton2 = findViewById(R.id.randomCornerButton2);
 
-        wandering1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
+        WindowManager windowManager = getWindowManager();
+        ButtonBorder.setupRandomMoveOnClick(randomCornerButton1, windowManager, northButton, this );
+        ButtonNorth.setupRandomMoveOnClick(northButton, windowManager,southButton, this );
+        ButtonSouth.setupRandomMoveOnClick(southButton, windowManager, topRightButton, this);
+        ButtonTopRight.setupRandomMoveOnClick(topRightButton, windowManager, topLeftButton, this);
+        ButtonTopLeft.setupRandomMoveOnClick(topLeftButton, windowManager, bottomRightButton, this);
+        ButtonBottomRight.setupRandomMoveOnClick(bottomRightButton, windowManager, bottomLeftButton, this);
+        ButtonBottomLeft.setupRandomMoveOnClick(bottomLeftButton, windowManager, wandering1, this);
 
-        wandering2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        wandering3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        northButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        southButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        topLeftButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        topRightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        bottomLeftButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        bottomRightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        randomCornerButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-        randomCornerButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int x = (int) view.getX();
-                int y = (int) view.getY();
-                String buttonTag = (String) view.getTag();
-                enviarDadosParaServidor("click", x, y, buttonTag);
-            }
-        });
-
-
-        // Inicia o movimento aleatório dos botões
-        startButtonMovement(wandering1);
-        startButtonMovement(wandering2);
-        startButtonMovement(wandering3);
-        startButtonMovement(northButton);
-        startButtonMovement(southButton);
-        startButtonMovement(topLeftButton);
-        startButtonMovement(topRightButton);
-        startButtonMovement(bottomLeftButton);
-        startButtonMovement(bottomRightButton);
-        startButtonMovement(randomCornerButton1);
-        startButtonMovement(randomCornerButton2);
     }
 
-    private void enviarDadosParaServidor(String evento, int x, int y, String buttonTag) {
+
+    public void sendDataToServer(String evento, int x, int y, String buttonTag) {
         try {
             Evento eventoObj = new Evento();
             eventoObj.setEvento(evento);
@@ -218,97 +106,12 @@ public class MainActivity extends AppCompatActivity {
             client.disconnect();
 
         } catch (MqttException | JSONException e) {
-            e.printStackTrace();
+            Log.e("TAG", "Erro ao processar MQTT ou JSON: " + e.getMessage(), e);
         }
-    }
-
-
-    private void startButtonMovement(final Button button) {
-        button.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if(button == randomCornerButton1 || button == randomCornerButton2) {
-                    moveButtonRandomlyBorder(button);
-                } else {
-                    moveButtonRandomly(button);
-                }
-                startButtonMovement(button);
-            }
-        }, 2000);
-    }
-
-    private void moveButtonRandomly(Button button) {
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int screenWidth = displayMetrics.widthPixels;
-        int screenHeight = displayMetrics.heightPixels;
-
-        int buttonWidth = button.getWidth();
-        int buttonHeight = button.getHeight();
-
-        int margin = 100; // Margem de 100 pixels em todas as direções
-
-        int randomX;
-        int randomY;
-
-        if (button == northButton) {
-            randomX = (int) (Math.random() * (screenWidth - 2 * margin - buttonWidth) + margin);
-            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + margin);
-        } else if (button == southButton) {
-            randomX = (int) (Math.random() * (screenWidth - 2 * margin - buttonWidth) + margin);
-            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + (screenHeight / 2) + margin);
-        } else if (button == topLeftButton) {
-            randomX = (int) (Math.random() * (screenWidth / 2 - buttonWidth - margin) + margin);
-            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + margin);
-        } else if (button == topRightButton) {
-            randomX = (int) (Math.random() * (screenWidth / 2 - buttonWidth - margin) + (screenWidth / 2) + margin);
-            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + margin);
-        } else if (button == bottomLeftButton) {
-            randomX = (int) (Math.random() * (screenWidth / 2 - buttonWidth - margin) + margin);
-            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + (screenHeight / 2) + margin);
-        } else if (button == bottomRightButton) {
-            randomX = (int) (Math.random() * (screenWidth / 2 - buttonWidth - margin) + (screenWidth / 2) + margin);
-            randomY = (int) (Math.random() * (screenHeight / 2 - buttonHeight - margin) + (screenHeight / 2) + margin);
-        } else {
-            randomX = (int) (Math.random() * (screenWidth - buttonWidth - 2 * margin) + margin);
-            randomY = (int) (Math.random() * (screenHeight - buttonHeight - 2 * margin) + margin);
-        }
-
-        button.setX(randomX);
-        button.setY(randomY);
-    }
-
-
-    private void moveButtonRandomlyBorder(Button button) {
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int screenWidth = displayMetrics.widthPixels;
-        int screenHeight = displayMetrics.heightPixels;
-
-        int buttonWidth = button.getWidth();
-        int buttonHeight = button.getHeight();
-
-        // Margem de 0 pixels para que os botões toquem as bordas
-        int margin = 0;
-
-        int randomX;
-        int randomY;
-
-        // Movimento ao longo das bordas e nos cantos
-        if (Math.random() < 0.5) { // Movimento horizontal
-            randomX = (int) (Math.random() * (screenWidth - buttonWidth));
-            randomY = Math.random() < 0.5 ? margin : screenHeight - buttonHeight;
-        } else { // Movimento vertical
-            randomX = Math.random() < 0.5 ? margin : screenWidth - buttonWidth;
-            randomY = (int) (Math.random() * (screenHeight - buttonHeight));
-        }
-
-        button.setX(randomX);
-        button.setY(randomY);
     }
 
     private boolean isDragging = false;
-    private float startX, startY; 
+    private float startX, startY;
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -327,19 +130,19 @@ public class MainActivity extends AppCompatActivity {
                 if (!isDragging && isDragging(x, y)) {
                     // Se o usuário começar a arrastar, é marcado como arrastando
                     isDragging = true;
-                    enviarDadosParaServidor("button_drag_start", x, y, "");
+                    sendDataToServer("button_drag_start", x, y, "");
                 }
                 break;
 
             case MotionEvent.ACTION_UP:
                 if (isDragging) {
                     // Se o usuário estava arrastando e parou, é enviada uma mensagem indicando o fim do arrasto
-                    enviarDadosParaServidor("button_drag_end", x, y, "");
+                    sendDataToServer("button_drag_end", x, y, "");
                     isDragging = false;
                 } else {
                     // Se não houve arrasto e o dedo foi levantado, verifique se foi um clique fora dos botões
                     if (!isInsideButton(x, y)) {
-                        enviarDadosParaServidor("click_outside_button", x, y, "");
+                        sendDataToServer("click_outside_button", x, y, "");
                     }
                 }
                 break;
@@ -353,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
         if (isInsideView(x, y, wandering1) || isInsideView(x, y, wandering2) || isInsideView(x, y, wandering3) ||
                 isInsideView(x, y, northButton) || isInsideView(x, y, southButton) || isInsideView(x, y, topLeftButton) ||
                 isInsideView(x, y, topRightButton) || isInsideView(x, y, bottomLeftButton) || isInsideView(x, y, bottomRightButton) ||
-                isInsideView(x, y, randomCornerButton1) || isInsideView(x, y, randomCornerButton2)) {
+                isInsideView(x, y, randomCornerButton1)) {
             return true;
         }
         return false;
@@ -380,8 +183,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int TOUCH_SLOP = 20;
 
 
-
-
-
-
 }
+
+
+
+

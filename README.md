@@ -21,6 +21,6 @@ sudo apt-get install mosquitto-clients
 ## Assinatura do Tópico
 Após a instalação do cliente Mosquitto, você pode assinar o tópico `app/robot_interactions` usando o seguinte comando:
 ```bash
-mosquitto_sub -h broker.hivemq.comapp -t app/robot_interactions
+mosquitto_sub -h broker.hivemq.com -t app/robot_interactions
 ```
 Observação: Para realizar a assiantura do tópico no Windows é necessário executar o cmd como administrador. 

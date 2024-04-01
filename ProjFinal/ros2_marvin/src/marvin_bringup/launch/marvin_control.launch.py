@@ -2,7 +2,7 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 
 
-def generation_launch_description():
+def generate_launch_description():
     ld = LaunchDescription()
     
     mqtt_publisher_node = Node(
