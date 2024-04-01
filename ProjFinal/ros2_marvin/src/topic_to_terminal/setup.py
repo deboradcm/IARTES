@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'terminal_sub = topic_to_terminal.node_to_terminal:main'
         ],
     },
 )

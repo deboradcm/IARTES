@@ -8,6 +8,7 @@ setup.py
 ../../build/mqtt_publish/mqtt_publish.egg-info/top_level.txt
 ../../build/mqtt_publish/mqtt_publish.egg-info/zip-safe
 mqtt_publish/__init__.py
+mqtt_publish/mqtt_pub.py
 resource/mqtt_publish
 test/test_copyright.py
 test/test_flake8.py

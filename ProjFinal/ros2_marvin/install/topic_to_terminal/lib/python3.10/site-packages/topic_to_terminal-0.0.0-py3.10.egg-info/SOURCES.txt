@@ -12,3 +12,4 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 topic_to_terminal/__init__.py
+topic_to_terminal/node_to_terminal.py
