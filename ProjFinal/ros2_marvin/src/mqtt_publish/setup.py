@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'mqtt_publish = mqtt_publish.mqtt_pub:main'
         ],
     },
 )
