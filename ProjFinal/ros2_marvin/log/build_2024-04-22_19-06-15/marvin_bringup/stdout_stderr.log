@@ -1,0 +1,16 @@
+-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/launch/marvin_control.launch.py
+[31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:100 (message):
+  ament_cmake_symlink_install_directory() can't find
+  '/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup/../../marvin_description/urdf'
+Call Stack (most recent call first):
+  ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:317 (ament_cmake_symlink_install_directory)
+  cmake_install.cmake:46 (include)
+
+[0m
