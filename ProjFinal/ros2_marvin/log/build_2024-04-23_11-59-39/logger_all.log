@@ -1,0 +1,303 @@
+[0.153s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.153s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7c36ffd605e0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7c36ffd27f10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7c36ffd27f10>>, mixin_verb=('build',))
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.198s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/debora/IARTES/ProjFinal/ros2_marvin'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extension 'ignore'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extension 'ignore_ament_install'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_bringup) by extension 'ros'
+[0.223s] DEBUG:colcon.colcon_core.package_identification:Package 'src/marvin_bringup' with type 'ros.ament_cmake' and name 'marvin_bringup'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extension 'ignore_ament_install'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extensions ['colcon_pkg']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extension 'colcon_pkg'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extensions ['colcon_meta']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/marvin_description) by extension 'ros'
+[0.224s] DEBUG:colcon.colcon_core.package_identification:Package 'src/marvin_description' with type 'ros.ament_cmake' and name 'marvin_description'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extension 'ignore_ament_install'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extensions ['colcon_pkg']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extension 'colcon_pkg'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extensions ['colcon_meta']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extension 'colcon_meta'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extensions ['ros']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/mqtt_publish) by extension 'ros'
+[0.225s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mqtt_publish' with type 'ros.ament_python' and name 'mqtt_publish'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/topic_to_terminal) by extension 'ros'
+[0.226s] DEBUG:colcon.colcon_core.package_identification:Package 'src/topic_to_terminal' with type 'ros.ament_python' and name 'topic_to_terminal'
+[0.226s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.226s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.253s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.253s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.261s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 69 installed packages in /home/debora/ws_moveit/install
+[0.262s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/debora/ROS2Curso/ros2_ws/install
+[0.264s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 45 installed packages in /home/debora/install
+[0.268s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 342 installed packages in /opt/ros/humble
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'cmake_target' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'marvin_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.330s] DEBUG:colcon.colcon_core.verb:Building package 'marvin_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description', 'merge_install': False, 'path': '/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_description', 'symlink_install': False, 'test_result_base': None}
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'cmake_target' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'cmake_clean_cache' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'cmake_clean_first' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'cmake_force_configure' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'ament_cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'catkin_cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'mqtt_publish' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.331s] DEBUG:colcon.colcon_core.verb:Building package 'mqtt_publish' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish', 'merge_install': False, 'path': '/home/debora/IARTES/ProjFinal/ros2_marvin/src/mqtt_publish', 'symlink_install': False, 'test_result_base': None}
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'cmake_target' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'cmake_clean_cache' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'cmake_clean_first' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'cmake_force_configure' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'ament_cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'catkin_cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'topic_to_terminal' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.331s] DEBUG:colcon.colcon_core.verb:Building package 'topic_to_terminal' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal', 'merge_install': False, 'path': '/home/debora/IARTES/ProjFinal/ros2_marvin/src/topic_to_terminal', 'symlink_install': False, 'test_result_base': None}
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'cmake_args' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'cmake_target' from command line to 'None'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.331s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.332s] Level 5:colcon.colcon_core.verb:set package 'marvin_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.332s] DEBUG:colcon.colcon_core.verb:Building package 'marvin_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup', 'merge_install': False, 'path': '/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.332s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.333s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.333s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/mqtt_publish' with build type 'ament_python'
+[0.334s] Level 1:colcon.colcon_core.shell:create_environment_hook('mqtt_publish', 'ament_prefix_path')
+[0.337s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/hook/ament_prefix_path.ps1'
+[0.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/hook/ament_prefix_path.dsv'
+[0.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/hook/ament_prefix_path.sh'
+[0.340s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.340s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.351s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/topic_to_terminal' with build type 'ament_python'
+[0.351s] Level 1:colcon.colcon_core.shell:create_environment_hook('topic_to_terminal', 'ament_prefix_path')
+[0.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/hook/ament_prefix_path.ps1'
+[0.353s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/hook/ament_prefix_path.dsv'
+[0.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/hook/ament_prefix_path.sh'
+[0.354s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.354s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.367s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_description' with build type 'ament_cmake'
+[0.367s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_description'
+[0.368s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.368s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.596s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/mqtt_publish'
+[0.596s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.596s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.827s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/topic_to_terminal'
+[0.828s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.828s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.840s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/debora/ROS2Curso/ros2_ws/install/my_py_pkg:/home/debora/ws_moveit/install/moveit_configs_utils:/home/debora/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description -- -j4 -l4
+[0.897s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/debora/ROS2Curso/ros2_ws/install/my_py_pkg:/home/debora/ws_moveit/install/moveit_configs_utils:/home/debora/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description -- -j4 -l4
+[0.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/debora/ROS2Curso/ros2_ws/install/my_py_pkg:/home/debora/ws_moveit/install/moveit_configs_utils:/home/debora/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description
+[0.968s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marvin_description)
+[0.968s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/debora/ROS2Curso/ros2_ws/install/my_py_pkg:/home/debora/ws_moveit/install/moveit_configs_utils:/home/debora/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description
+[0.986s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description' for CMake module files
+[0.986s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description' for CMake config files
+[0.986s] Level 1:colcon.colcon_core.shell:create_environment_hook('marvin_description', 'cmake_prefix_path')
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/hook/cmake_prefix_path.ps1'
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/hook/cmake_prefix_path.dsv'
+[0.988s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/hook/cmake_prefix_path.sh'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/bin'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/lib/pkgconfig/marvin_description.pc'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/lib/python3.10/site-packages'
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/bin'
+[0.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.ps1'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.dsv'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.sh'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.bash'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.zsh'
+[1.002s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/colcon-core/packages/marvin_description)
+[1.052s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marvin_description)
+[1.053s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description' for CMake module files
+[1.053s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description' for CMake config files
+[1.053s] Level 1:colcon.colcon_core.shell:create_environment_hook('marvin_description', 'cmake_prefix_path')
+[1.054s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/hook/cmake_prefix_path.ps1'
+[1.054s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/hook/cmake_prefix_path.dsv'
+[1.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/hook/cmake_prefix_path.sh'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/bin'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/lib/pkgconfig/marvin_description.pc'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/lib/python3.10/site-packages'
+[1.056s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/bin'
+[1.056s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.ps1'
+[1.056s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.dsv'
+[1.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.sh'
+[1.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.bash'
+[1.058s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.zsh'
+[1.058s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/colcon-core/packages/marvin_description)
+[1.442s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/mqtt_publish': PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/prefix_override:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mqtt_publish build --build-base /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/build install --record /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/install.log --single-version-externally-managed install_data
+[1.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/topic_to_terminal': PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/prefix_override:/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/topic_to_terminal build --build-base /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/build install --record /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/install.log --single-version-externally-managed install_data
+[1.868s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish' for CMake module files
+[1.868s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish' for CMake config files
+[1.870s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/mqtt_publish' returned '0': PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/prefix_override:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mqtt_publish build --build-base /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/build install --record /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/install.log --single-version-externally-managed install_data
+[1.871s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib'
+[1.871s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/bin'
+[1.871s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/pkgconfig/mqtt_publish.pc'
+[1.871s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages'
+[1.871s] Level 1:colcon.colcon_core.shell:create_environment_hook('mqtt_publish', 'pythonpath')
+[1.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/hook/pythonpath.ps1'
+[1.872s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/hook/pythonpath.dsv'
+[1.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/hook/pythonpath.sh'
+[1.875s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/bin'
+[1.875s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mqtt_publish)
+[1.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/package.ps1'
+[1.877s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/package.dsv'
+[1.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/package.sh'
+[1.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/package.bash'
+[1.878s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish/package.zsh'
+[1.878s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/colcon-core/packages/mqtt_publish)
+[1.885s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal' for CMake module files
+[1.885s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/topic_to_terminal' returned '0': PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/prefix_override:/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/topic_to_terminal build --build-base /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/build install --record /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/install.log --single-version-externally-managed install_data
+[1.886s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal' for CMake config files
+[1.886s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib'
+[1.886s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/bin'
+[1.886s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/pkgconfig/topic_to_terminal.pc'
+[1.887s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages'
+[1.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('topic_to_terminal', 'pythonpath')
+[1.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/hook/pythonpath.ps1'
+[1.887s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/hook/pythonpath.dsv'
+[1.888s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/hook/pythonpath.sh'
+[1.888s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/bin'
+[1.888s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(topic_to_terminal)
+[1.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/package.ps1'
+[1.889s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/package.dsv'
+[1.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/package.sh'
+[1.890s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/package.bash'
+[1.890s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal/package.zsh'
+[1.890s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/colcon-core/packages/topic_to_terminal)
+[1.891s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup' with build type 'ament_cmake'
+[1.891s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup'
+[1.891s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.891s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.909s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup': AMENT_PREFIX_PATH=/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/debora/ROS2Curso/ros2_ws/install/my_py_pkg:/home/debora/ws_moveit/install/moveit_configs_utils:/home/debora/install/moveit_configs_utils:/opt/ros/humble PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup -- -j4 -l4
+[1.961s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup' returned '0': AMENT_PREFIX_PATH=/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/debora/ROS2Curso/ros2_ws/install/my_py_pkg:/home/debora/ws_moveit/install/moveit_configs_utils:/home/debora/install/moveit_configs_utils:/opt/ros/humble PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup -- -j4 -l4
+[2.003s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup': AMENT_PREFIX_PATH=/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/debora/ROS2Curso/ros2_ws/install/my_py_pkg:/home/debora/ws_moveit/install/moveit_configs_utils:/home/debora/install/moveit_configs_utils:/opt/ros/humble PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup
+[2.028s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marvin_bringup)
+[2.028s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup' for CMake module files
+[2.029s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup' for CMake config files
+[2.029s] Level 1:colcon.colcon_core.shell:create_environment_hook('marvin_bringup', 'cmake_prefix_path')
+[2.029s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/hook/cmake_prefix_path.ps1'
+[2.029s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/hook/cmake_prefix_path.dsv'
+[2.030s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup' returned '0': AMENT_PREFIX_PATH=/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/debora/ROS2Curso/ros2_ws/install/my_py_pkg:/home/debora/ws_moveit/install/moveit_configs_utils:/home/debora/install/moveit_configs_utils:/opt/ros/humble PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup
+[2.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/hook/cmake_prefix_path.sh'
+[2.031s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/bin'
+[2.031s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/lib/pkgconfig/marvin_bringup.pc'
+[2.031s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/lib/python3.10/site-packages'
+[2.031s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/bin'
+[2.031s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.ps1'
+[2.031s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.dsv'
+[2.032s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.sh'
+[2.032s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.bash'
+[2.032s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.zsh'
+[2.033s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/colcon-core/packages/marvin_bringup)
+[2.073s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marvin_bringup)
+[2.074s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup' for CMake module files
+[2.074s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup' for CMake config files
+[2.074s] Level 1:colcon.colcon_core.shell:create_environment_hook('marvin_bringup', 'cmake_prefix_path')
+[2.074s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/hook/cmake_prefix_path.ps1'
+[2.075s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/hook/cmake_prefix_path.dsv'
+[2.075s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/hook/cmake_prefix_path.sh'
+[2.076s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/bin'
+[2.076s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/lib/pkgconfig/marvin_bringup.pc'
+[2.076s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/lib/python3.10/site-packages'
+[2.076s] Level 1:colcon.colcon_core.environment:checking '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/bin'
+[2.076s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.ps1'
+[2.076s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.dsv'
+[2.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.sh'
+[2.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.bash'
+[2.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/package.zsh'
+[2.078s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/colcon-core/packages/marvin_bringup)
+[2.078s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.078s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.078s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.078s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.083s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.084s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.084s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.104s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.104s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/local_setup.ps1'
+[2.106s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/debora/IARTES/ProjFinal/ros2_marvin/install/_local_setup_util_ps1.py'
+[2.107s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/setup.ps1'
+[2.111s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/local_setup.sh'
+[2.111s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/debora/IARTES/ProjFinal/ros2_marvin/install/_local_setup_util_sh.py'
+[2.112s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/setup.sh'
+[2.117s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/local_setup.bash'
+[2.118s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/setup.bash'
+[2.124s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/local_setup.zsh'
+[2.125s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/debora/IARTES/ProjFinal/ros2_marvin/install/setup.zsh'

@@ -3,7 +3,7 @@
          value="$(find-pkg-share marvin_description)/urdf/marvin.urdf" />
     
     <node pkg="robot_state_publisher" exec="robot_state_publisher">
-         <param name="marvin_description"
+         <param name="robot_description"
                 value="$(command 'xacro $(var urdf_path)')" />
     </node>
 
