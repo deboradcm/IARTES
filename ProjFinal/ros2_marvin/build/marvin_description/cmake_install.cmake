@@ -43,6 +43,13 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/marvin_description" TYPE DIRECTORY FILES
+    "/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_description/urdf"
+    "/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_description/launch"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/marvin_description")
 endif()
 

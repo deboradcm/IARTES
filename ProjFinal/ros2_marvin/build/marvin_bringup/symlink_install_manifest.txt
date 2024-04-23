@@ -1,5 +1,5 @@
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/launch/marvin_control.launch.py
-/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/urdf/robot_marvin_urdf.urdf
+/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/urdf/marvin.urdf
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/ament_index/resource_index/package_run_dependencies/marvin_bringup
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/ament_index/resource_index/parent_prefix_path/marvin_bringup
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_bringup/share/marvin_bringup/environment/ament_prefix_path.sh

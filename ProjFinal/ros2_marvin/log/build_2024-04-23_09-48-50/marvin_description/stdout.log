@@ -1,0 +1,24 @@
+-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_description
+-- Install configuration: ""
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/urdf
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/urdf/marvin.urdf
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/launch
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/launch/display.launch.xml
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/ament_index/resource_index/package_run_dependencies/marvin_description
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/ament_index/resource_index/parent_prefix_path/marvin_description
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/environment/ament_prefix_path.sh
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/environment/path.sh
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/environment/path.dsv
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/local_setup.bash
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/local_setup.sh
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/local_setup.zsh
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/local_setup.dsv
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.dsv
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/ament_index/resource_index/packages/marvin_description
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/cmake/marvin_descriptionConfig.cmake
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/cmake/marvin_descriptionConfig-version.cmake
+-- Up-to-date: /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/package.xml
