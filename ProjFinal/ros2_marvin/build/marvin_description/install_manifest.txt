@@ -1,5 +1,9 @@
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/urdf/marvin.urdf
+/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/urdf/marvin.csv
+/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/urdf/marvin_expandido.urdf
+/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/launch/display.launch.py
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/launch/display.launch.xml
+/home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/launch/__pycache__/display.launch.cpython-310.pyc
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/ament_index/resource_index/package_run_dependencies/marvin_description
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/ament_index/resource_index/parent_prefix_path/marvin_description
 /home/debora/IARTES/ProjFinal/ros2_marvin/install/marvin_description/share/marvin_description/environment/ament_prefix_path.sh

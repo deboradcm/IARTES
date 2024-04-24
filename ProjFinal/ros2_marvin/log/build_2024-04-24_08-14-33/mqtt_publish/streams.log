@@ -1,0 +1,25 @@
+[0.925s] Invoking command in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/mqtt_publish': PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/prefix_override:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mqtt_publish build --build-base /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/build install --record /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/install.log --single-version-externally-managed install_data
+[1.113s] running egg_info
+[1.125s] writing ../../build/mqtt_publish/mqtt_publish.egg-info/PKG-INFO
+[1.131s] writing dependency_links to ../../build/mqtt_publish/mqtt_publish.egg-info/dependency_links.txt
+[1.132s] writing entry points to ../../build/mqtt_publish/mqtt_publish.egg-info/entry_points.txt
+[1.133s] writing requirements to ../../build/mqtt_publish/mqtt_publish.egg-info/requires.txt
+[1.133s] writing top-level names to ../../build/mqtt_publish/mqtt_publish.egg-info/top_level.txt
+[1.160s] reading manifest file '../../build/mqtt_publish/mqtt_publish.egg-info/SOURCES.txt'
+[1.161s] writing manifest file '../../build/mqtt_publish/mqtt_publish.egg-info/SOURCES.txt'
+[1.161s] running build
+[1.161s] running build_py
+[1.162s] copying mqtt_publish/__init__.py -> /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/build/lib/mqtt_publish
+[1.163s] copying mqtt_publish/mqtt_pub.py -> /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/build/lib/mqtt_publish
+[1.164s] running install
+[1.168s] running install_lib
+[1.181s] running install_data
+[1.182s] copying resource/mqtt_publish -> /home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/ament_index/resource_index/packages
+[1.182s] copying package.xml -> /home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/share/mqtt_publish
+[1.183s] running install_egg_info
+[1.197s] removing '/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages/mqtt_publish-0.0.0-py3.10.egg-info' (and everything under it)
+[1.197s] Copying ../../build/mqtt_publish/mqtt_publish.egg-info to /home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages/mqtt_publish-0.0.0-py3.10.egg-info
+[1.199s] running install_scripts
+[1.341s] Installing mqtt_publish script to /home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/mqtt_publish
+[1.342s] writing list of installed files to '/home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/install.log'
+[1.400s] Invoked command in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/mqtt_publish' returned '0': PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/prefix_override:/home/debora/IARTES/ProjFinal/ros2_marvin/install/mqtt_publish/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mqtt_publish build --build-base /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/build install --record /home/debora/IARTES/ProjFinal/ros2_marvin/build/mqtt_publish/install.log --single-version-externally-managed install_data

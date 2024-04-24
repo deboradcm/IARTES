@@ -316,6 +316,12 @@ ament_cmake_symlink_install_directory("/home/debora/IARTES/ProjFinal/ros2_marvin
 # install(DIRECTORY "/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup/../marvin_description/urdf" "DESTINATION" "share/marvin_bringup")
 ament_cmake_symlink_install_directory("/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup" DIRECTORY "/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup/../marvin_description/urdf" "DESTINATION" "share/marvin_bringup")
 
+# install(DIRECTORY "launch" "DESTINATION" "share/marvin_bringup")
+ament_cmake_symlink_install_directory("/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup" DIRECTORY "launch" "DESTINATION" "share/marvin_bringup")
+
+# install(DIRECTORY "/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup/../marvin_description/urdf" "DESTINATION" "share/marvin_bringup")
+ament_cmake_symlink_install_directory("/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup" DIRECTORY "/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup/../marvin_description/urdf" "DESTINATION" "share/marvin_bringup")
+
 # install(FILES "/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/marvin_bringup" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/debora/IARTES/ProjFinal/ros2_marvin/src/marvin_bringup" FILES "/home/debora/IARTES/ProjFinal/ros2_marvin/build/marvin_bringup/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/marvin_bringup" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

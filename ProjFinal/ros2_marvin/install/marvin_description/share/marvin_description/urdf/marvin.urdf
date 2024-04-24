@@ -6,7 +6,7 @@
     <inertial>
       <origin
         xyz="4.7705E-17 0.073876 5.5262E-18"
-        rpy="0 0 0" />
+        rpy="0.0 0.0 0.0" />
       <mass
         value="133.74" />
       <inertia
@@ -19,8 +19,8 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/base_link.STL" />
@@ -33,8 +33,8 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/base_link.STL" />
@@ -46,7 +46,7 @@
     <inertial>
       <origin
         xyz="-2.5737E-14 0.094534 7.8988E-11"
-        rpy="0 0 0" />
+        rpy="0.0 0.0 0.0" />
       <mass
         value="24.106" />
       <inertia
@@ -59,8 +59,8 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_1.STL" />
@@ -73,8 +73,8 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_1.STL" />
@@ -85,26 +85,26 @@
     name="joint_1"
     type="revolute">
     <origin
-      xyz="0 0.405 0"
-      rpy="0 -1.5708 0" />
+      xyz="0.0 0.405 0.0"
+      rpy="0.0 -1.5708 0.0" />
     <parent
       link="base_link" />
     <child
       link="link_1" />
     <axis
-      xyz="0 0 0" />
+      xyz="0.0 0.0 0.0" />
     <limit
-      lower="0"
+      lower="0.0"
       upper="3.142"
-      effort="300"
-      velocity="3" />
+      effort="300.0"
+      velocity="3.0" />
   </joint>
   <link
     name="link_22">
     <inertial>
       <origin
         xyz="-1.0537E-16 -0.16752 1.7347E-18"
-        rpy="0 0 0" />
+        rpy="0.0 0.0 0.0" />
       <mass
         value="43.576" />
       <inertia
@@ -117,8 +117,8 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_22.STL" />
@@ -131,8 +131,8 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_22.STL" />
@@ -143,26 +143,26 @@
     name="joint_2"
     type="revolute">
     <origin
-      xyz="0 0 0"
-      rpy="0 0 0" />
+      xyz="0.0 0.0 0.0"
+      rpy="0.0 0.0 0.0" />
     <parent
       link="link_1" />
     <child
       link="link_22" />
     <axis
-      xyz="0 0 0" />
+      xyz="0.0 0.0 0.0" />
     <limit
       lower="-1.57"
       upper="1.57"
-      effort="200"
-      velocity="3" />
+      effort="200.0"
+      velocity="3.0" />
   </joint>
   <link
     name="link_3">
     <inertial>
       <origin
         xyz="-0.17893 -0.4 -2.7235E-16"
-        rpy="0 0 0" />
+        rpy="0.0 0.0 0.0" />
       <mass
         value="22.044" />
       <inertia
@@ -175,8 +175,8 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_3.STL" />
@@ -189,8 +189,8 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_3.STL" />
@@ -201,26 +201,26 @@
     name="joint_3"
     type="revolute">
     <origin
-      xyz="0 0 0"
-      rpy="0 0 0" />
+      xyz="0.0 0.0 0.0"
+      rpy="0.0 0.0 0.0" />
     <parent
       link="link_22" />
     <child
       link="link_3" />
     <axis
-      xyz="0 0 0" />
+      xyz="0.0 0.0 0.0" />
     <limit
-      lower="0"
+      lower="0.0"
       upper="3.142"
-      effort="200"
-      velocity="3" />
+      effort="200.0"
+      velocity="3.0" />
   </joint>
   <link
     name="link_4">
     <inertial>
       <origin
         xyz="-0.40167 0.4 -1.0842E-16"
-        rpy="0 0 0" />
+        rpy="0.0 0.0 0.0" />
       <mass
         value="14.116" />
       <inertia
@@ -233,8 +233,8 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_4.STL" />
@@ -247,8 +247,8 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_4.STL" />
@@ -259,26 +259,26 @@
     name="joint_4"
     type="revolute">
     <origin
-      xyz="0.05 -0.75 0"
-      rpy="3.1416 0 -1.5708" />
+      xyz="0.05 -0.75 0.0"
+      rpy="3.1416 0.0 -1.5708" />
     <parent
       link="link_3" />
     <child
       link="link_4" />
     <axis
-      xyz="0 0 0" />
+      xyz="0.0 0.0 0.0" />
     <limit
-      lower="0"
+      lower="0.0"
       upper="-3.142"
-      effort="200"
-      velocity="3" />
+      effort="200.0"
+      velocity="3.0" />
   </joint>
   <link
     name="link_5">
     <inertial>
       <origin
         xyz="-0.558543881206724 0.4 -3.81639164714898E-17"
-        rpy="0 0 0" />
+        rpy="0.0 0.0 0.0" />
       <mass
         value="1.48616706965233" />
       <inertia
@@ -291,8 +291,8 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_5.STL" />
@@ -305,8 +305,8 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_5.STL" />
@@ -317,26 +317,26 @@
     name="joint_5"
     type="revolute">
     <origin
-      xyz="0.002 0 0"
-      rpy="0 0 0" />
+      xyz="0.002 0.0 0.0"
+      rpy="0.0 0.0 0.0" />
     <parent
       link="link_4" />
     <child
       link="link_5" />
     <axis
-      xyz="0 0 0" />
+      xyz="0.0 0.0 0.0" />
     <limit
-      lower="0"
+      lower="0.0"
       upper="3.142"
-      effort="200"
-      velocity="3" />
+      effort="200.0"
+      velocity="3.0" />
   </joint>
   <link
     name="link_6">
     <inertial>
       <origin
         xyz="-0.60237 0.4 -0.016013"
-        rpy="0 0 0" />
+        rpy="0.0 0.0 0.0" />
       <mass
         value="0.11653" />
       <inertia
@@ -349,8 +349,8 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_6.STL" />
@@ -363,8 +363,8 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_6.STL" />
@@ -375,26 +375,26 @@
     name="joint_6"
     type="prismatic">
     <origin
-      xyz="0 0 0"
-      rpy="0 0 0" />
+      xyz="0.0 0.0 0.0"
+      rpy="0.0 0.0 0.0" />
     <parent
       link="link_5" />
     <child
       link="link_6" />
     <axis
-      xyz="0 0 0" />
+      xyz="0.0 0.0 0.0" />
     <limit
-      lower="0"
+      lower="0.0"
       upper="0.03"
-      effort="100"
-      velocity="3" />
+      effort="100.0"
+      velocity="3.0" />
   </joint>
   <link
     name="link_7">
     <inertial>
       <origin
         xyz="-0.602368573581709 0.4 -0.0160129768886558"
-        rpy="0 0 0" />
+        rpy="0.0 0.0 0.0" />
       <mass
         value="0.116532917792388" />
       <inertia
@@ -407,8 +407,8 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_7.STL" />
@@ -421,8 +421,8 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
       <geometry>
         <mesh
           filename="package://marvin_description/meshes/link_7.STL" />
@@ -433,18 +433,18 @@
     name="joint_7"
     type="prismatic">
     <origin
-      xyz="0 0.8 0"
+      xyz="0.0 0.8 0.0"
       rpy="3.1416 0 0" />
     <parent
       link="link_5" />
     <child
       link="link_7" />
     <axis
-      xyz="0 0 0" />
+      xyz="0.0 0.0 0.0" />
     <limit
       lower="-0.03"
-      upper="0"
-      effort="100"
-      velocity="3" />
+      upper="0.0"
+      effort="100.0"
+      velocity="3.0" />
   </joint>
 </robot>

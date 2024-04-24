@@ -19,6 +19,16 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  DIRECTORY ${CMAKE_SOURCE_DIR}/../marvin_description/urdf
+  DESTINATION share/${PROJECT_NAME}
+)
+
 
 
 

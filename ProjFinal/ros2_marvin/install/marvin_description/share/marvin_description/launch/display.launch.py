@@ -1,44 +1,38 @@
-from launch_ros.actions import Node
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration
-from ament_index_python.packages import get_package_share_directory
-import os  # Importe o módulo os
+from launch_ros.parameter_descriptions import ParameterValue
+from launch_ros.actions import Node
+from launch.substitutions import Command
+import os
+from ament_index_python.packages import get_package_share_path
 
 def generate_launch_description():
-    share_dir = get_package_share_directory('marvin_description')
 
-    urdf_file = os.path.join(share_dir, 'urdf', 'marvin.urdf')
-
-    gui_arg = DeclareLaunchArgument(
-        name='gui',
-        default_value='True'
-    )
-
-    show_gui = LaunchConfiguration('gui')
+    urdf_path = os.path.join(get_package_share_path('marvin_description'),
+                             'urdf', 'marvin.urdf')
+    rviz_config_path = os.path.join(get_package_share_path('marvin_description'),
+                                    'rviz', 'urdf_config.rviz')
+    
+    robot_description = ParameterValue(Command(['xacro ', urdf_path]), value_type=str)
 
     robot_state_publisher_node = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        name='robot_state_publisher',
-        parameters=[
-            {'robot_description': urdf_file}
-        ]
+        package="robot_state_publisher",
+        executable="robot_state_publisher",
+        parameters=[{'robot_description': robot_description}]
     )
 
-    rviz_config_file = os.path.join(share_dir, 'config', 'display.rviz')
+    joint_state_publisher_gui_node = Node(
+        package="joint_state_publisher_gui",
+        executable="joint_state_publisher_gui"
+    )
 
-    rviz_node = Node(
-        package='rviz2',
-        executable='rviz2',
-        name='rviz2',
-        arguments=['-d', rviz_config_file],
-        output='screen'
+    rviz2_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        arguments=['-d', rviz_config_path]
     )
 
     return LaunchDescription([
-        gui_arg,
         robot_state_publisher_node,
-        rviz_node,
+        joint_state_publisher_gui_node,
+        rviz2_node
     ])
-

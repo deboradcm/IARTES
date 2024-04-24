@@ -1,0 +1,25 @@
+[0.909s] Invoking command in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/topic_to_terminal': PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/prefix_override:/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/topic_to_terminal build --build-base /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/build install --record /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/install.log --single-version-externally-managed install_data
+[1.106s] running egg_info
+[1.118s] writing ../../build/topic_to_terminal/topic_to_terminal.egg-info/PKG-INFO
+[1.119s] writing dependency_links to ../../build/topic_to_terminal/topic_to_terminal.egg-info/dependency_links.txt
+[1.119s] writing entry points to ../../build/topic_to_terminal/topic_to_terminal.egg-info/entry_points.txt
+[1.119s] writing requirements to ../../build/topic_to_terminal/topic_to_terminal.egg-info/requires.txt
+[1.119s] writing top-level names to ../../build/topic_to_terminal/topic_to_terminal.egg-info/top_level.txt
+[1.149s] reading manifest file '../../build/topic_to_terminal/topic_to_terminal.egg-info/SOURCES.txt'
+[1.150s] writing manifest file '../../build/topic_to_terminal/topic_to_terminal.egg-info/SOURCES.txt'
+[1.150s] running build
+[1.150s] running build_py
+[1.151s] copying topic_to_terminal/__init__.py -> /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/build/lib/topic_to_terminal
+[1.151s] copying topic_to_terminal/node_to_terminal.py -> /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/build/lib/topic_to_terminal
+[1.151s] running install
+[1.155s] running install_lib
+[1.169s] running install_data
+[1.170s] copying resource/topic_to_terminal -> /home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/ament_index/resource_index/packages
+[1.170s] copying package.xml -> /home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/share/topic_to_terminal
+[1.170s] running install_egg_info
+[1.186s] removing '/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages/topic_to_terminal-0.0.0-py3.10.egg-info' (and everything under it)
+[1.186s] Copying ../../build/topic_to_terminal/topic_to_terminal.egg-info to /home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages/topic_to_terminal-0.0.0-py3.10.egg-info
+[1.187s] running install_scripts
+[1.339s] Installing terminal_sub script to /home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/topic_to_terminal
+[1.339s] writing list of installed files to '/home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/install.log'
+[1.369s] Invoked command in '/home/debora/IARTES/ProjFinal/ros2_marvin/src/topic_to_terminal' returned '0': PYTHONPATH=/home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/prefix_override:/home/debora/IARTES/ProjFinal/ros2_marvin/install/topic_to_terminal/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/topic_to_terminal build --build-base /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/build install --record /home/debora/IARTES/ProjFinal/ros2_marvin/build/topic_to_terminal/install.log --single-version-externally-managed install_data
