@@ -1,0 +1,37 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup
+-- Install configuration: ""
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/launch
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/launch/marvin_control.launch.py
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/urdf
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/urdf/marvin.urdf
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/ament_index/resource_index/package_run_dependencies/marvin_bringup
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/ament_index/resource_index/parent_prefix_path/marvin_bringup
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/environment/ament_prefix_path.sh
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/environment/ament_prefix_path.dsv
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/environment/path.sh
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/environment/path.dsv
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/local_setup.bash
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/local_setup.sh
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/local_setup.zsh
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/local_setup.dsv
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/package.dsv
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/ament_index/resource_index/packages/marvin_bringup
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/cmake/marvin_bringupConfig.cmake
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/cmake/marvin_bringupConfig-version.cmake
+-- Installing: /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_bringup/share/marvin_bringup/package.xml

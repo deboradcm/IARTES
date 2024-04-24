@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: topic_to_terminal
+Version: 0.0.0
+Summary: TODO: Package description
+Maintainer: debora
+Maintainer-email: debora.medeiros@icomp.ufam.edu.br
+License: TODO: License declaration
+Requires-Dist: setuptools

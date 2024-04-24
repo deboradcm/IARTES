@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../build/topic_to_terminal/topic_to_terminal.egg-info/PKG-INFO
+../build/topic_to_terminal/topic_to_terminal.egg-info/SOURCES.txt
+../build/topic_to_terminal/topic_to_terminal.egg-info/dependency_links.txt
+../build/topic_to_terminal/topic_to_terminal.egg-info/entry_points.txt
+../build/topic_to_terminal/topic_to_terminal.egg-info/requires.txt
+../build/topic_to_terminal/topic_to_terminal.egg-info/top_level.txt
+../build/topic_to_terminal/topic_to_terminal.egg-info/zip-safe
+resource/topic_to_terminal
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+topic_to_terminal/__init__.py
+topic_to_terminal/node_to_terminal.py

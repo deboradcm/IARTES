@@ -1,0 +1,9 @@
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/uninstall.dir
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/marvin_bringup_uninstall.dir
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/test.dir
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/edit_cache.dir
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/rebuild_cache.dir
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/list_install_components.dir
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/install.dir
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/install/local.dir
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/marvin_bringup/CMakeFiles/install/strip.dir

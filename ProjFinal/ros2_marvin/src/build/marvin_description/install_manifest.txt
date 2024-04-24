@@ -1,0 +1,17 @@
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/urdf/marvin.urdf
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/launch/display.launch.xml
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/ament_index/resource_index/package_run_dependencies/marvin_description
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/ament_index/resource_index/parent_prefix_path/marvin_description
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/environment/ament_prefix_path.sh
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/environment/ament_prefix_path.dsv
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/environment/path.sh
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/environment/path.dsv
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/local_setup.bash
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/local_setup.sh
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/local_setup.zsh
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/local_setup.dsv
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/package.dsv
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/ament_index/resource_index/packages/marvin_description
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/cmake/marvin_descriptionConfig.cmake
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/cmake/marvin_descriptionConfig-version.cmake
+/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/marvin_description/share/marvin_description/package.xml

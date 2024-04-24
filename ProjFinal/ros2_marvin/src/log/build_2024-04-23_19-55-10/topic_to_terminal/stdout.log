@@ -1,0 +1,23 @@
+running egg_info
+writing ../build/topic_to_terminal/topic_to_terminal.egg-info/PKG-INFO
+writing dependency_links to ../build/topic_to_terminal/topic_to_terminal.egg-info/dependency_links.txt
+writing entry points to ../build/topic_to_terminal/topic_to_terminal.egg-info/entry_points.txt
+writing requirements to ../build/topic_to_terminal/topic_to_terminal.egg-info/requires.txt
+writing top-level names to ../build/topic_to_terminal/topic_to_terminal.egg-info/top_level.txt
+reading manifest file '../build/topic_to_terminal/topic_to_terminal.egg-info/SOURCES.txt'
+writing manifest file '../build/topic_to_terminal/topic_to_terminal.egg-info/SOURCES.txt'
+running build
+running build_py
+copying topic_to_terminal/__init__.py -> /home/debora/IARTES/ProjFinal/ros2_marvin/src/build/topic_to_terminal/build/lib/topic_to_terminal
+copying topic_to_terminal/node_to_terminal.py -> /home/debora/IARTES/ProjFinal/ros2_marvin/src/build/topic_to_terminal/build/lib/topic_to_terminal
+running install
+running install_lib
+running install_data
+copying resource/topic_to_terminal -> /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/topic_to_terminal/share/ament_index/resource_index/packages
+copying package.xml -> /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/topic_to_terminal/share/topic_to_terminal
+running install_egg_info
+removing '/home/debora/IARTES/ProjFinal/ros2_marvin/src/install/topic_to_terminal/lib/python3.10/site-packages/topic_to_terminal-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/topic_to_terminal/topic_to_terminal.egg-info to /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/topic_to_terminal/lib/python3.10/site-packages/topic_to_terminal-0.0.0-py3.10.egg-info
+running install_scripts
+Installing terminal_sub script to /home/debora/IARTES/ProjFinal/ros2_marvin/src/install/topic_to_terminal/lib/topic_to_terminal
+writing list of installed files to '/home/debora/IARTES/ProjFinal/ros2_marvin/src/build/topic_to_terminal/install.log'
